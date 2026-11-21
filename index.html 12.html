@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MyLife AI</title>
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22MyLife%20AI%22%2C%22short_name%22%3A%22MyLife%22%2C%22start_url%22%3A%22https%3A//syedswat2007-code.github.io/Alone/%22%2C%22scope%22%3A%22https%3A//syedswat2007-code.github.io/Alone/%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23e9dcff%22%2C%22theme_color%22%3A%22%237661cf%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAANd0lEQVR42u3ZV3ITURBAUe2SaEwUOYdtmgwmw0bMh6v4oKAwUkl6M/e8OivwdPe1YfHs0gEAQYunFw8ACBIAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAgHQAnlx8DkCQAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAIAAC9ADzefwFAkAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAApAPwaP8lAEECACAAAAgAAAIAgADA9B396/kRIQAwq7O%2BiefHjgDA/G%2B9KiAA4NxLAgIALr4eIADg6IsBAgCOvhggAODoiwECgLvvKQECgLvvKQECgLvvKQECgLvvKQECgNPvyQACgLvvKQECgNPvyQACgNPvyQACgLvvKQECgNPvyQACgNPvyQACgNPvyQACgNPvyQC/B%2BDhhVfgJgafsUcAcP01AAHA6fdkAAHA6fdkAAHA6fdkAAHA9fc0AAHA6fdkAAHA9fc0AAHA6fdkAAHA9fc0AAHA6fdkAAHA9fc0AAHA6fdkAAHA9fc0AAHA9fc0AAHA6fdkAAHA9fc0AAHA9fc0AAFw/T1PAxAAp9/zZAABcP299S6UH5EGCACuv9PjQ2iAAOD6uzK%2BjgYIAO6Lm%2BJ7aYAA4Jo4Ij6fBkw%2BAK8ZWfJq%2BJq%2BJtuweHDhNWOqXQof18dlywTAgXAafGgfWgBwFJwDH91HFwAcAifAABgAAcDy23yTYBIEADtv202FqRAA7LklNx7GQwCw3nbbnJgTASC/1b6mgTEwAkBun31HY2NsBIDcGvuI5sf8CAC57fUFDZJBEgByS%2BvzmSgTJQDYVcyVuRIAAlvq2xkwAyYAWE6MmTETAAJr6cOZN/MmABQX0lczckZOAMitok9m9syeAGADMYEmUAAI7J7vZRSNogBg5TCQBlIAaOybj2UmzaQAkNs0X8pwGk4BwIJhRI1oJgD3996wCVNZLV/KoBrULAFI75XPhFkVAGwUJtbECgB2CXNrbgWAWS6SD4TpRQDsD5hhAcDmgEkWAOa6Nr4OhhkBsDBgpBEAqwIGWwCY6574NJhtBMCGgAlHAOwGmHMEwGKAORcAbAWYdgFg4ivhu2DgEQDLAMYeAWhsgo%2BCyUcA7ACYfwTA9IMtQACMPtgCBMDcg10QAD%2BFiQ%2B9L4J1sA4CYNzBUlgKATDrYCkQAIMOVoM/B%2BDe3ltOaKgR9zmwHbZjTQIwyfk24lgQCyIAfsEBO2JHBMBkg02xKQJgrMGm%2BBwCMLex9i1W%2BXxvl6vxo7MsAmCgDXTi3EuClREATLOjLwZWRgAwyu6%2BElgcATDHhtjdVwK7IwAm2BA7/TJgfQTABBtfd18JbJAAGF/j6/TLgA0SALNrdp1%2BGbBHAmBwDa7r326APRIAU2tq06c/ngHbJABG1sjWT382A7ZJAIyseXX9NcBCCYBhNa/t0x/MgJ0SAMNqUl1/DbBWAmBSTarrH2uAtRIAY2pMXX8NsFwCYEarM%2BrWZzNguQTAjLr%2BaID9EgDTGRtQx10DrNhYAbh7/h2/jDCds/3Zuuz/w4pZsS0QgLGm0/VHA2yZAPjdxPVnadEsmgD4xcT11wC7ZtcEwFC6/hpg1%2ByaABhKARAAu2bXBMBEuv4aYOM0QACMo%2BuvATZOAATAOLr%2BGmDjBEAARh9H1x8NsHQC4JcRAUAA7J0AGETXn1k3wN4JgEF0/dEAqycAplAAEACrJwD%2BDnX9KTTA9gmA30EEAH8EWEABMH%2BuP/4IsIACYP5cfwoNsIACYP4EAAGwgAJg%2BFx/NMAaCoDJEwAEwBoKgMlz/ZltA6yhAJg8AUAArKEANCbPv/8gADZRAIyd648/AmyiAPjDUwAQAMu4tQDcOf8%2Ba7czN%2B0fnZs7HsvYXMZ1CICZEwABsIwCIAAGTgAEwD4KgAAYONdfA%2ByjAAiAgRMAAbCPAiAABk4ABMA%2BCoDrnx04R1YDrKQACIAAIABWUgBMm3//QQBspQAYNQFAAGylABg1//6DBthKATBqAoAA2EoBMGoCgADYSgEwagKAANhKATBqAoAA2EoBMGoCgADYSgEwaq4/rQbYSgEwagKAANhKATBqAoAA2EoBMGoCgADYSgEwZwKA/we2mwJgyAQAARAAATBkAoAACIAAGDIBEAC7KQACYMgEQADspgD8PQCHQTsdssn%2B0BzWKQXAboZ2c2WL2%2BcOg3Y4ZBP%2BoTms02E3U7u5MgEwZAIgAHZTAATAkAmAANhNARAAQyYAAmA3BUAADJkACIDdFAANaM%2BZqyoAtlIABEAAEABbKQACIAAIgK0UAKMmAAiArRQAo%2Bb/gXH9baUAGDUBQABspQAYNQFAAGylABg1AUAAbKUAGDUBQABspQAYNQFAAGylABg1DSB3/W2lABg1AUAAbKUAzHfU/CsQAmAlBcC0CQACYCUFwN%2BbGoB//7GPAmDgBAABsI8CYOAEAAGwjwJg4DSA%2BV5/%2BygA/tNJAPDrv2UUADMnAAiAZdx0AG6d%2B5C125mb/E/PzR2JZSwv48rSAdjt2AkAAmATBcDYaQDp628TBcAfngKAX/%2BtoQCYPAFAAKyhAJg8DcC//1hDATB5AoAAWEMBMHwagOtvAQXA/AmAAFhAARAA86cBrr8FFAABMH8a4PpbQAEQgMHnzx8B%2BPXf9gmA30E0AL/%2BWz0BMIUCgABYPQHwd6gG4PrbOwEwiBrA0t7ZOwHwp6gACICls3QC4JcRDXD9bZwACIBx1ADX38YJgAAYRw1w/W2cAAiAidQA19%2Buuf4CYCgFQADsmgAIgKHUANffrgmAn8IwQ6kBuP4WTQD8YqIBLG2ZLRMAv5togOtvxazYZgJw8%2BxHfhlhOuf843XZT8aKWbHtEIDhBnTmP173PXz97ZcAGFANcOVdf8slAGY0PKNufer0Wy4BMKbGVANcf2slACbVpGpA6fpbKwEwqYZVA1x/OyUA5tWw5jNgoSyUAJhXI1tsgG2yTQJgZI1sLgO2yTYJgKk1tbkM2CN7JAAG1%2BAWG2CP7JEAmF2zm8uADbJBAmB8jW8uAz6cDRIA42uCWyXwmayPABhiE5zLgE9jdwTAEJvjVgl8CIsjAEbZKLdK4MduZQTANJvmUAz8eK2MABhoA51Igh%2BdZREABpppY41NsSkCYKzBptgUATDZYEfsiABEhtt8Y0EsiAD4BQdsh%2B1YNQA3zn7ihEb7HccXwWpYjXUIgEEHSyEAmHWwFAKAcQfrIACMPvGGHrtgFwTA3IMtQACMPtgCBMD0g/lHAOwAmHwEYKZrYBMw9giAZQADjwD09sFKYNoRAFsB5hwBsBhgzhEAuwEmHAGwIWC2BYCZLok9wWAjAFYFjDQCYGHAMCMAnZ2xNphkBMDmgBlGAOwPmF4BoLNCFglziwDYJV8KEysA2CjMqlkVAFJLZa8wqOkAXD/zmQ2Zymr5UkbUiDYJgAWzYIbTcAoA7TWzaWbSTAoA3WWzbwbSQAoAVg6jaBQFgOTi2T0TaAIFABuI2TN7AkByD62ikTNyAkB3Gy2keTNvAkB6J62lMTNmAoDlxIAZMAEguaK21FyZKwHArmKiTJQAkNxYS2uQDJIAkF5d22t%2BzI8AkN5ha2xsjI0A0N1k%2B2xgDIwAUF9pW21OzIkAkN5t6208jIcAkF5ye24qTIUAkN52O28STIIAUN98y28AfF8BIH0CHAIfHQGgfg4cBR8aAaB%2BGoIHwsdlkAB8YWRHvedr%2Bppsx2J55guDOwo/n8/nY3MEwBFxTXwv118AcFPcF1/H9RcANMDR8SFcfwFAA1q3yY/I9RcANMDzXH8BQAY8z%2BkXADTA81x/AUADPM/1FwA0wHP9EQBkwHP6EQA0wHP9EQA0wHP9EQBkwHP6EQA0wHP9EQBkwHP6EQA0wHP9EQBkwHP6EQA0wHP9EQBkwHP6EQA0wHP9EQBkwHP6EQBkwHP6EQBkwHP6EQA0wHP9%2BS0A105/hWNuYuQZdY4JADLg9CMAIANOPwIAMuD0IwAgA04/AoASeO4%2BAoAMeE4/AoAMeE4/AoASeO4%2BAoAMeE4/AoASeO4%2BAoASeO4%2BAoASeO4%2BAoASeO4%2BAoAYOPogAIiBow8CgBg4%2BiAA6IGLDwKAJDj3IACoglsPAgDrpcKPCAEAQAAAEAAABAAAAQBgigG4evobAEECACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAJAOwJVT3wEIEgAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAABAAAAQBAAAAQAAAEAAABAEAAABAAAAQAAAEAQAAAEAAAAQCgF4DLp34AECQAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAAgAAAIAgAAAIAAACAAAAgCAAAAgAAAIAAACAIAAACAAAGU/AaSC0WI3v98qAAAAAElFTkSuQmCC%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image/png%22%2C%22purpose%22%3A%22any%22%7D%5D%7D"><meta name="theme-color" content="#7661cf"><link rel="apple-touch-icon" href="data:image/png;base64,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"><link rel="icon" href="data:image/png;base64,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">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:linear-gradient(135deg,#e9dcff,#d8efff,#fff0cf);--tx:#34415d;--h:#514477;--mut:#6b6e8c;--in:#fff;--bd:#d3cce7;--card:#fff;--item:rgba(255,255,255,.75);--btn:#7661cf}
+@media(prefers-color-scheme:dark){:root{--bg:linear-gradient(135deg,#1a1730,#16243a,#2a2218);--tx:#e6e8f5;--h:#cfc4f5;--mut:#a3a6c4;--in:#26233f;--bd:#443f6a;--card:#25223d;--item:rgba(255,255,255,.07);--btn:#8a75e6}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;height:auto}
+body{margin:0;padding:16px;font-family:Arial,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+.container{max-width:650px;margin:auto}
+header{text-align:center;padding:22px 10px}
+h1{color:var(--h);font-size:32px;margin:0 0 7px}h2{font-size:20px;margin:0 0 14px;color:var(--h)}h3{color:var(--h)}
+.sub,.small{color:var(--mut)}.small{font-size:13px}
+.card{padding:19px;margin:15px 0;border-radius:18px;border:1px solid rgba(255,255,255,.25);box-shadow:0 5px 15px rgba(76,78,120,.12);background:color-mix(in srgb,var(--a) 22%,var(--card))}
+button{border:0;border-radius:10px;padding:12px 16px;margin:5px 3px;font-weight:bold;background:var(--btn);color:#fff;cursor:pointer}
+button.delete{background:#d9546e}button.secondary{background:#2f94a6}button.soft{background:#7d7699}
+input,textarea{width:100%;padding:12px;margin:7px 0;border:1px solid var(--bd);border-radius:10px;background:var(--in);color:var(--tx);font-size:15px;font-family:inherit}
+input[type=checkbox]{width:22px;height:22px;accent-color:#7763d4;flex-shrink:0;margin:0}
+textarea{min-height:80px;resize:vertical}
+.item{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:12px;margin:9px 0;border-radius:12px;background:var(--item)}
+.item label{display:flex;align-items:center;gap:9px;flex:1;min-width:0;overflow-wrap:anywhere}
+.item label.done span{text-decoration:line-through;opacity:.6}
+.item button{flex-shrink:0;margin:0}
+.block{display:block}.hidden{display:none}.center{text-align:center}
+.pbg{height:12px;background:color-mix(in srgb,var(--tx) 15%,transparent);border-radius:20px;overflow:hidden;margin:12px 0}
+#bar{height:100%;width:0;background:#38b9d7;transition:width .3s}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}
+.box{padding:14px 12px;border-radius:14px;font-size:13px;background:color-mix(in srgb,var(--a) 30%,var(--card))}
+.box b{display:block;font-size:27px;margin:5px 0}.box span{display:block;font-size:12px;color:var(--mut)}
+.streak{text-align:center;border:2px solid #f3d16e;padding:25px 15px;background:color-mix(in srgb,#ffd36a 28%,var(--card))}
+.snum{font-size:55px;font-weight:bold;color:#c48a1f;margin:12px 0}
+.res{background:var(--item);border-radius:12px;margin-top:8px;overflow:hidden}
+.r{padding:12px;border-bottom:1px solid var(--bd);cursor:pointer}.r:last-child{border:0}
+.r em{display:block;font-size:11px;color:#9a84dd;font-weight:bold;font-style:normal;margin-bottom:4px}
+.hl{outline:3px solid #a18be9;outline-offset:3px}
+.status{background:var(--item);border-radius:10px;padding:10px;font-size:13px;color:var(--mut)}
+.week{display:flex;gap:6px;align-items:flex-end;margin:12px 0}
+.col{flex:1;text-align:center;font-size:11px;color:var(--mut)}
+.track{height:70px;background:color-mix(in srgb,var(--tx) 12%,transparent);border-radius:8px;display:flex;align-items:flex-end;overflow:hidden;margin:4px 0}
+.fill{width:100%;background:#38b9d7}.proj summary{font-weight:bold;cursor:pointer;margin-bottom:8px}.proj .item{margin:6px 0}
+#toast{display:none;position:fixed;left:12px;right:12px;max-width:520px;margin:auto;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;background:#34415d;color:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+#toast.show{display:block}
+</style></head>
+<body>
+<div id="toast"></div>
+<div class="container">
+<header><h1>MyLife AI ✨</h1><p class="sub">Build a better life, one day at a time.</p></header>
+
+<div class="card center" id="welcome" style="--a:#b79cff"><h2>Welcome to MyLife AI</h2><p>Ready to make today productive?</p><button onclick="startDay()">Start My Day</button></div>
+
+<div id="mainApp" class="hidden">
+
+<div class="card" style="--a:#fff"><h2>✨ My Smart Overview</h2><p id="todayDate" class="small"></p>
+<div class="grid">
+<div class="box" style="--a:#6fa8ff">📋 Tasks<b id="ovT">0/0</b><span>Completed tasks</span></div>
+<div class="box" style="--a:#ff8ab8">🌱 Habits<b id="ovH">0/0</b><span>Completed habits</span></div>
+<div class="box" style="--a:#ffc94d">🔥 Streak<b id="ovS">0 days</b><span>Current streak</span></div>
+<div class="box" style="--a:#5fd08f">📊 Assessment<b id="ovA">0%</b><span>Overall progress</span></div>
+</div>
+<p><strong>Today’s Progress</strong></p><div class="pbg"><div id="bar"></div></div>
+<p id="ptxt" class="small">0% completed</p><p id="amsg" class="small"></p></div>
+
+<div class="card" id="searchSection" style="--a:#b79cff"><h2>🔎 Smart Search</h2>
+<input id="searchInput" type="search" placeholder="Search tasks, habits, goals, streak..." oninput="search()">
+<div id="searchResults" class="res hidden"></div>
+<p class="small">Search tasks, habits, goals, timetable, prayers, journal and reflections.</p></div>
+
+<div class="card" style="--a:#9aa0ff"><h2>🎙️ My Voice Assistant</h2>
+<button onclick="voiceOn('Hello! MyLife AI voice assistant is ready.')">Enable Voice</button>
+<button class="secondary" onclick="voiceOn('Hello! This is MyLife AI. Your voice assistant is working.')">Test Voice</button>
+<button class="soft" onclick="voiceOff()">Turn Voice Off</button>
+<p id="voiceStatus" class="status"></p>
+<button onclick="summary()">Read My Daily Summary</button></div>
+
+<div class="card" style="--a:#66cfcf"><h2>🔔 My Reminders</h2>
+<p class="small">Reminders appear on screen (and as notifications if enabled) while this page is open. If your phone was asleep, missed reminders show when you return.</p>
+<button class="secondary" onclick="enableNotif()">Enable Notifications</button><button onclick="fire('Test Reminder','This is a test.','Hello! It’s prayer time. Please get ready.')">Test Reminder</button><button onclick="toast('Test in 10 seconds. Don’t touch the screen.');setTimeout(()=>fire('Test Reminder','This is a delayed test.','Hello! It’s prayer time. Please get ready.'),10000)">Test in 10 sec</button><button class="soft" onclick="keepOn()">Keep Screen On</button>
+<p id="notifStatus" class="status"></p></div>
+
+<div class="card" id="prayersSection" style="--a:#7fbfff"><h2>My Prayer Times 🕌</h2><p class="small">Enter your local prayer times.</p><div id="prayerList"></div></div>
+
+<div class="card" id="tasksSection" style="--a:#ffc46b"><h2>My Daily Tasks 📋</h2>
+<input id="taskInput" placeholder="Enter a new task">
+<label class="small">⏰ Set a time to get a reminder and voice alert (optional)</label><input type="time" id="taskTime">
+<button onclick="addTask()">Add Task</button><button class="soft" onclick="clearDone()">Clear completed</button>
+<div id="taskList"></div></div>
+
+<div class="card" id="goalsSection" style="--a:#6fd4a2"><h2>My Goals 🎯</h2>
+<input id="goalInput" placeholder="Enter your goal"><button onclick="addGoal()">Add Goal</button><div id="goalList"></div></div>
+
+<div class="card" id="projectsSection" style="--a:#ff9a6b"><h2>My Projects 🚀</h2><p class="small">Build your own projects (Cyber Security, Coding, Study, Business...) with steps, progress and notes. Tap a project to open it.</p>
+<input id="projectInput" placeholder="Project name">
+<button class="soft" onclick="$('projectInput').value='Cyber Security'">Cyber Security</button><button class="soft" onclick="$('projectInput').value='Coding'">Coding</button><button class="soft" onclick="$('projectInput').value='Study'">Study</button><button class="soft" onclick="$('projectInput').value='Business'">Business</button><button class="soft" onclick="$('projectInput').value='Fitness'">Fitness</button><br>
+<button onclick="addProject()">Add Project</button><div id="projectList"></div></div>
+
+<div class="card" id="habitsSection" style="--a:#8bbcff"><h2>My Daily Habits 🌱</h2>
+<p class="small">Complete ALL habits to earn today’s streak.</p>
+<input id="habitInput" placeholder="Enter your own habit">
+<label class="small">⏰ Set a time to get a reminder and voice alert (optional)</label><input type="time" id="habitTime">
+<button onclick="addHabit()">Add Habit</button><div id="habitList"></div><p id="habitStatus" class="small"></p></div>
+
+<div class="card streak" id="streakSection"><h2>🔥 My Daily Streak</h2>
+<div class="snum"><span id="streakCount">0</span> Days</div>
+<p id="streakMsg"></p><p class="small">Consecutive days of completed habits</p></div>
+
+<div class="card" id="timetableSection" style="--a:#a995ff"><h2>My Timetable 🕒</h2>
+<input type="time" id="ttTime"><input id="ttAct" placeholder="Enter activity"><button onclick="addTT()">Add Activity</button><div id="timetableList"></div></div>
+
+<div class="card" id="journalSection" style="--a:#ff9fc0"><h2>Daily Journal 📖</h2>
+<textarea id="journalInput" placeholder="Write about your day..."></textarea><button onclick="saveJournal()">Save Journal</button><div id="journalList"></div></div>
+
+<div class="card" id="reflectionSection" style="--a:#78d6b4"><h2>Daily Reflection 🌸</h2>
+<label>1. What did I do well today?</label><textarea id="ref0"></textarea>
+<label>2. What could I improve?</label><textarea id="ref1"></textarea>
+<label>3. What is my main goal for tomorrow?</label><textarea id="ref2"></textarea>
+<button onclick="saveRef()">Save Reflection</button><div id="reflectionList"></div></div>
+
+<div class="card" style="--a:#8bb8ff"><h2>Weekly Progress 📊</h2><p class="small">Last 7 days, completion per day.</p>
+<div class="week" id="weekBars"></div>
+<p>Tasks completed: <strong id="wT">0</strong></p><p>Habits completed: <strong id="wH">0</strong></p><p>Average progress: <strong id="wP">0%</strong></p></div>
+
+</div></div>
+<script>
+const $=i=>document.getElementById(i),L=localStorage;
+const fmt=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=()=>fmt(new Date());
+const before=(d,n)=>{const x=new Date(d+"T12:00:00");x.setDate(x.getDate()-n);return fmt(x)};
+const get=(k,f)=>{try{const v=L.getItem(k);return v===null?f:JSON.parse(v)}catch(e){return f}};
+const set=(k,v)=>{try{L.setItem(k,JSON.stringify(v))}catch(e){}};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+let tt;function toast(m,ms){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),ms||6000)}
+
+// Lists get stable ids (fixes reminders breaking after deletes) and migrate old data
+function list(k){let ch=0,a=get(k,[]).map(x=>typeof x==="string"?(ch=1,{id:uid(),name:x}):x);
+ a.forEach(x=>{if(!x.id){x.id=uid();ch=1}if(x.activity&&!x.name){x.name=x.activity;ch=1}});if(ch)set(k,a);return a}
+function mutate(k,fn){const a=list(k);fn(a);set(k,a);refresh()}
+function add(k,o){const a=list(k);a.push({id:uid(),done:false,...o});if(k==="myLifeTimetable")a.sort((x,y)=>x.time.localeCompare(y.time));set(k,a);refresh()}
+function renderList(k,box,fmtr,checks){const b=$(box);b.innerHTML="";
+ list(k).forEach(x=>{const r=el("div","item"),l=el("label",x.done?"done":"");
+  if(checks){const c=el("input");c.type="checkbox";c.checked=!!x.done;
+   c.onchange=()=>mutate(k,a=>{const y=a.find(z=>z.id===x.id);if(y){y.done=c.checked;y.doneDate=c.checked?today():null}});l.append(c)}
+  l.append(el("span","",fmtr(x)));
+  const d=el("button","delete","Delete");d.onclick=()=>mutate(k,a=>{const i=a.findIndex(z=>z.id===x.id);if(i>-1)a.splice(i,1)});
+  r.append(l,d);b.append(r)})}
+
+function startDay(){$("welcome").classList.add("hidden");$("mainApp").classList.remove("hidden");
+ $("todayDate").textContent=new Date().toDateString();
+ voice=SS&&get("myLifeVoice",true);loadPrayers();loadJournals();loadRefs();refresh();voiceStatus();notifStatus();if(voice)say("Voice reminders are on.");keepOn(1);check();
+ setInterval(check,5000);document.addEventListener("visibilitychange",()=>{if(!document.hidden){check();if(keepWanted&&!WL)keepOn(1)}})}
+
+function refresh(){resetHabits();
+ const f=x=>x.name+(x.time?" · ⏰ "+x.time:"");
+ renderList("myLifeTasks","taskList",f,1);renderList("myLifeHabits","habitList",f,1);
+ renderList("myLifeGoals","goalList",x=>x.name);renderProjects();renderList("myLifeTimetable","timetableList",x=>x.time+" — "+x.name);
+ progress();search()}
+
+function resetHabits(){if(L.getItem("myLifeHabitDate")!==today()){const h=list("myLifeHabits");h.forEach(x=>x.done=false);set("myLifeHabits",h);L.setItem("myLifeHabitDate",today())}}
+
+// Adding
+function addTask(){const n=$("taskInput").value.trim();if(!n)return toast("Please enter a task.");add("myLifeTasks",{name:n,time:$("taskTime").value});$("taskInput").value=$("taskTime").value=""}
+const OPEN=new Set();
+function renderProjects(){const b=$("projectList");b.innerHTML="";
+ list("myLifeProjects").forEach(p=>{const st=p.steps||[],dn=st.filter(s=>s.done).length,pc=st.length?Math.round(dn/st.length*100):0;
+  const d=document.createElement("details");d.className="item block proj";d.open=OPEN.has(p.id);d.ontoggle=()=>{d.open?OPEN.add(p.id):OPEN.delete(p.id)};
+  d.append(el("summary","",p.name+" · "+dn+"/"+st.length+" ("+pc+"%)"));
+  const pb=el("div","pbg"),f=el("div");f.style.cssText="height:100%;background:#38b9d7;width:"+pc+"%";pb.append(f);d.append(pb);
+  st.forEach(s=>{const r=el("div","item"),l=el("label",s.done?"done":""),c=el("input");c.type="checkbox";c.checked=!!s.done;
+   c.onchange=()=>mutate("myLifeProjects",a=>{const q=a.find(z=>z.id===p.id),w=q&&q.steps.find(z=>z.id===s.id);if(w)w.done=c.checked});
+   l.append(c,el("span","",s.name));const x=el("button","delete","Delete");
+   x.onclick=()=>mutate("myLifeProjects",a=>{const q=a.find(z=>z.id===p.id);if(q)q.steps=q.steps.filter(z=>z.id!==s.id)});r.append(l,x);d.append(r)});
+  const si=el("input");si.placeholder="Add a step or topic";const sb=el("button","","Add Step");
+  sb.onclick=()=>{const v=si.value.trim();if(!v)return toast("Please enter a step.");OPEN.add(p.id);mutate("myLifeProjects",a=>{const q=a.find(z=>z.id===p.id);if(q)q.steps.push({id:uid(),name:v,done:false})})};
+  const nt=el("textarea");nt.placeholder="Notes, links, ideas...";nt.value=p.notes||"";
+  nt.onchange=()=>{const a=list("myLifeProjects"),q=a.find(z=>z.id===p.id);if(q){q.notes=nt.value;set("myLifeProjects",a)}};
+  const dl=el("button","delete","Delete Project");dl.onclick=()=>mutate("myLifeProjects",a=>{const i=a.findIndex(z=>z.id===p.id);if(i>-1)a.splice(i,1)});
+  d.append(si,sb,nt,dl);b.append(d)})}
+function addProject(){const n=$("projectInput").value.trim();if(!n)return toast("Please enter a project name.");const id=uid();OPEN.add(id);add("myLifeProjects",{id,name:n,notes:"",steps:[]});$("projectInput").value=""}
+function addGoal(){const n=$("goalInput").value.trim();if(!n)return toast("Please enter a goal.");add("myLifeGoals",{name:n});$("goalInput").value=""}
+function addHabit(){const n=$("habitInput").value.trim();if(!n)return toast("Please enter a habit.");add("myLifeHabits",{name:n,time:$("habitTime").value});$("habitInput").value=$("habitTime").value=""}
+function addTT(){const t=$("ttTime").value,n=$("ttAct").value.trim();if(!t||!n)return toast("Enter both time and activity.");add("myLifeTimetable",{time:t,name:n});$("ttTime").value=$("ttAct").value=""}
+function clearDone(){mutate("myLifeTasks",a=>{for(let i=a.length-1;i>=0;i--)if(a[i].done)a.splice(i,1)})}
+
+// Prayers
+const prayers=["Fajr","Dhuhr","Asr","Maghrib","Isha"];
+function loadPrayers(){let times=get("myLifePrayerTimes",{}),checks=get("myLifePrayerChecks",{});
+ if(L.getItem("prayerCheckDate")!==today()){checks={};set("myLifePrayerChecks",checks);L.setItem("prayerCheckDate",today())}
+ const box=$("prayerList");box.innerHTML="";
+ prayers.forEach(n=>{const r=el("div","item"),l=el("label","",n+" "),t=el("input");t.type="time";t.style.width="125px";t.value=times[n]||"";
+  t.onchange=()=>{times[n]=t.value;set("myLifePrayerTimes",times)};
+  const c=el("input");c.type="checkbox";c.checked=!!checks[n];c.onchange=()=>{checks[n]=c.checked;set("myLifePrayerChecks",checks);search()};
+  l.append(t);r.append(l,c);box.append(r)})}
+
+// Streak and progress
+function streak(h){let d=get("myLifeCompletedDates",[]);const all=h.length>0&&h.every(x=>x.done);
+ d=all?(d.includes(today())?d:[...d,today()]):d.filter(x=>x!==today());d=[...new Set(d)].sort();set("myLifeCompletedDates",d);
+ let s=0,c=today();if(!d.includes(c))c=before(c,1);while(d.includes(c)&&s<10000){s++;c=before(c,1)}
+ $("streakCount").textContent=s;$("ovS").textContent=s+" days";
+ const rem=h.filter(x=>!x.done).length;
+ $("habitStatus").textContent=!h.length?"Add habits to begin.":all?"🎉 All habits completed!":rem+" habit(s) remaining today.";
+ $("streakMsg").textContent=!h.length?"Add your daily habits to start your streak!":all?"Excellent! You earned today’s streak day. Keep going!":"Complete all "+rem+" remaining habit(s) to earn today’s streak!"}
+
+function progress(){const t=list("myLifeTasks"),h=list("myLifeHabits"),ct=t.filter(x=>x.done).length,ch=h.filter(x=>x.done).length,tot=t.length+h.length,p=tot?Math.round((ct+ch)/tot*100):0;
+ $("ovT").textContent=ct+"/"+t.length;$("ovH").textContent=ch+"/"+h.length;$("ovA").textContent=p+"%";
+ $("bar").style.width=p+"%";$("ptxt").textContent=p+"% completed";
+ $("amsg").textContent=!tot?"Add tasks and habits to begin your daily assessment.":p===100?"🌟 Excellent! You completed all your tasks and habits!":p>=75?"👏 Great progress! You’re close to completing your day.":p>=40?"👍 Good effort! Keep working on your remaining activities.":"💪 You can do it! Start with one small task.";
+ const hist=get("myLifeHistory",{}),day=today(),cut=before(day,30);
+ hist[day]={tc:t.filter(x=>x.done&&x.doneDate===day).length,tt:t.length,hc:ch,ht:h.length};
+ Object.keys(hist).forEach(k=>{if(k<cut)delete hist[k]});set("myLifeHistory",hist);
+ streak(h);weekly(hist)}
+
+function weekly(hist){const b=$("weekBars");b.innerHTML="";let T=0,H=0,sum=0,n=0;
+ for(let i=6;i>=0;i--){const d=before(today(),i),x=hist[d],tot=x?x.tt+x.ht:0,p=tot?Math.round((x.tc+x.hc)/tot*100):0;
+  if(x){T+=x.tc;H+=x.hc;if(tot){sum+=p;n++}}
+  const c=el("div","col"),tr=el("div","track"),f=el("div","fill");f.style.height=p+"%";tr.append(f);
+  c.append(el("div","",p+"%"),tr,el("div","",new Date(d+"T12:00:00").toLocaleDateString(undefined,{weekday:"short"})));b.append(c)}
+ $("wT").textContent=T;$("wH").textContent=H;$("wP").textContent=(n?Math.round(sum/n):0)+"%"}
+
+// Journal and reflection
+function saveJournal(){const t=$("journalInput").value.trim();if(!t)return toast("Please write something first.");
+ const j=get("myLifeJournals",[]);j.unshift({date:today(),text:t});set("myLifeJournals",j);$("journalInput").value="";loadJournals();search();toast("Journal saved!")}
+function loadJournals(){const b=$("journalList");b.innerHTML="<h3>Previous Journal Entries</h3>";
+ get("myLifeJournals",[]).forEach(e=>{const i=el("div","item block");i.append(el("strong","",e.date),el("p","",e.text));b.append(i)})}
+function saveRef(){const a=[0,1,2].map(i=>$("ref"+i).value.trim());if(!a.some(Boolean))return toast("Please answer at least one question.");
+ const l=get("myLifeReflections",[]),e=l.find(r=>r.date===today());if(e)e.answers=a;else l.unshift({date:today(),answers:a});
+ set("myLifeReflections",l);loadRefs();search();toast("Reflection saved!")}
+function loadRefs(){const b=$("reflectionList");b.innerHTML="<h3>Previous Reflections</h3>";
+ get("myLifeReflections",[]).forEach(e=>{const i=el("div","item block");i.append(el("strong","",e.date));(e.answers||[]).forEach((a,n)=>i.append(el("p","",(n+1)+". "+(a||"No answer"))));b.append(i)})}
+
+// Search
+function search(){const q=$("searchInput").value.trim().toLowerCase(),r=$("searchResults");r.innerHTML="";
+ if(!q)return r.classList.add("hidden");
+ const E=[],A=(c,n,d,s)=>E.push({c,n:String(n||""),d:d||"",s});
+ list("myLifeTasks").forEach(x=>A("Task",x.name,x.done?"Completed":"Not completed","tasksSection"));
+ list("myLifeHabits").forEach(x=>A("Habit",x.name,x.done?"Completed today":"Not completed today","habitsSection"));
+ list("myLifeGoals").forEach(x=>A("Goal",x.name,"Your saved goal","goalsSection"));
+ list("myLifeProjects").forEach(x=>{A("Project",x.name,(x.steps||[]).length+" steps","projectsSection");(x.steps||[]).forEach(s=>A("Project step",s.name,x.name,"projectsSection"))});
+ list("myLifeTimetable").forEach(x=>A("Timetable",x.name,x.time,"timetableSection"));
+ const pt=get("myLifePrayerTimes",{}),pc=get("myLifePrayerChecks",{});
+ prayers.forEach(n=>A("Prayer",n,(pt[n]||"Time not set")+" · "+(pc[n]?"Completed":"Not checked"),"prayersSection"));
+ A("Streak","My Daily Streak",$("streakCount").textContent+" consecutive days","streakSection");
+ get("myLifeJournals",[]).forEach(x=>A("Journal",x.text,x.date,"journalSection"));
+ get("myLifeReflections",[]).forEach(x=>(x.answers||[]).forEach((a,i)=>a&&A("Reflection",a,"Question "+(i+1)+" · "+x.date,"reflectionSection")));
+ const m=E.filter(e=>(e.n+" "+e.c+" "+e.d).toLowerCase().includes(q));r.classList.remove("hidden");
+ if(!m.length){r.append(el("div","r small","No matching results found."));return}
+ m.forEach(e=>{const d=el("div","r");d.append(el("em","",e.c),el("strong","",e.n.length>100?e.n.slice(0,100)+"...":e.n),el("div","small",e.d));
+  d.onclick=()=>{const s=$(e.s);s.scrollIntoView({behavior:"smooth",block:"start"});s.classList.add("hl");setTimeout(()=>s.classList.remove("hl"),1500)};r.append(d)})}
+
+// Voice
+let voice=false;const SS="speechSynthesis" in window;
+function voiceOn(t){if(!SS){$("voiceStatus").textContent="Voice is not supported in this browser.";return}voice=true;set("myLifeVoice",true);voiceStatus();say(t)}
+let U=null;function say(m){if(!voice||!SS||!m)return;try{speechSynthesis.cancel();speechSynthesis.resume()}catch(e){}setTimeout(()=>{U=new SpeechSynthesisUtterance(m);U.lang="en-US";U.rate=.9;U.volume=1;speechSynthesis.speak(U)},150)}
+function voiceOff(){voice=false;set("myLifeVoice",false);if(SS)speechSynthesis.cancel();voiceStatus()}
+function voiceStatus(){$("voiceStatus").textContent=voice?"Voice assistant is enabled.":"Voice assistant is currently off."}
+function summary(){if(!voice)return toast("First tap Enable Voice.");
+ const t=list("myLifeTasks"),h=list("myLifeHabits");
+ say("Here is your daily summary. You completed "+t.filter(x=>x.done).length+" out of "+t.length+" tasks. You completed "+h.filter(x=>x.done).length+" out of "+h.length+" habits. Your current streak is "+$("streakCount").textContent+" days.")}
+
+// Notifications
+const NO=!("Notification" in window);
+function notifStatus(){$("notifStatus").textContent=NO?"Notifications are not supported in this browser.":{granted:"Notifications are enabled.",denied:"Notifications are blocked. Check browser site settings.",default:"Notifications have not been enabled."}[Notification.permission]}
+async function enableNotif(){if(NO)return toast("Your browser does not support notifications.");
+ try{const p=await Notification.requestPermission();notifStatus();if(p==="granted")new Notification("MyLife AI",{body:"Notifications are now enabled."});else toast("Notification permission was not granted.")}catch(e){toast("Please enable notifications in your browser settings.")}}
+let AC=null,lastSpoken="",WL=null,keepWanted=false;
+function unlock(){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==="suspended")AC.resume()}catch(e){}if(SS){try{speechSynthesis.resume()}catch(e){}}}
+document.addEventListener("pointerdown",unlock);document.addEventListener("touchstart",unlock);
+let REP=[];function clearRep(){REP.forEach(clearTimeout);REP=[]}
+$("toast").onclick=()=>{clearRep();try{speechSynthesis.cancel()}catch(e){}$("toast").classList.remove("show")};
+function beep(){try{unlock();const o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);g.gain.value=.3;o.frequency.value=880;o.start();o.stop(AC.currentTime+.5)}catch(e){}}
+async function keepOn(q){keepWanted=true;try{WL=await navigator.wakeLock.request("screen");WL.addEventListener("release",()=>{WL=null});if(!q)toast("Screen will stay on while this page is open.")}catch(e){if(!q)toast("Keep screen on is not supported here.")}}
+function fire(t,m,spoken){if(!NO&&Notification.permission==="granted"){try{new Notification(t,{body:m})}catch(e){}}lastSpoken=spoken||m;toast("🔔 "+t+": "+m+" (tap to stop)",60000);beep();try{navigator.vibrate&&navigator.vibrate([300,150,300])}catch(e){}clearRep();setTimeout(()=>say(lastSpoken),600);REP=[20000,40000].map(d=>setTimeout(()=>{beep();say(lastSpoken)},d))}
+
+// Reminders: checks every minute passed since the last check, so throttled tabs don’t skip any
+let lastD="",lastT="";
+function check(){if($("mainApp").classList.contains("hidden"))return;
+ const n=new Date(),cur=String(n.getHours()).padStart(2,"0")+":"+String(n.getMinutes()).padStart(2,"0"),day=today();
+ if(lastD&&lastD!==day){loadPrayers();refresh()}
+ const from=lastD===day?lastT:cur;lastD=day;lastT=cur;
+ const fired=get("myLifeFiredReminders",[]).filter(k=>k.startsWith(day));
+ const go=(kind,id,time,title,msg,spoken)=>{if(!time||time<from||time>cur)return;const k=day+"|"+kind+"|"+id;if(fired.includes(k))return;fired.push(k);fire(title,msg,spoken)};
+ list("myLifeTasks").forEach(x=>!x.done&&go("t",x.id,x.time,"Task Reminder",x.name,"Hello! It’s time for your task: "+x.name+". Please get ready."));
+ list("myLifeHabits").forEach(x=>!x.done&&go("h",x.id,x.time,"Habit Reminder",x.name,"Hello! It’s time for your habit: "+x.name+". Let’s do it now."));
+ list("myLifeTimetable").forEach(x=>go("tt",x.id,x.time,"Timetable",x.name,"Hello! It’s time for: "+x.name+". Please get ready."));
+ const pt=get("myLifePrayerTimes",{}),pc=get("myLifePrayerChecks",{});
+ prayers.forEach(p=>!pc[p]&&go("p",p,pt[p],"Prayer Time",p+" time has arrived.","Hello! It’s "+p+" prayer time. Please get ready."));
+ set("myLifeFiredReminders",fired)}
+</script></body></html>
